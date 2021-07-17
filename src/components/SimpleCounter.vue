@@ -1,5 +1,6 @@
 <template>
-  <h1>Counter</h1>
+  <h1>Simple Counter</h1>
+  {{ counter }}
   <h3>{{ counterComputed }}</h3>
   <button @click="increment">Aumentar</button>
   <button @click="decrement">Decrementar</button>
@@ -22,7 +23,7 @@ export default {
       counter.value--;
     }
 
-    return {counterComputed, increment, decrement}
+    return {counter, counterComputed, increment, decrement}
   }
 }
 </script>
