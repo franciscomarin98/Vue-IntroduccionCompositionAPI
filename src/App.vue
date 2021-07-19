@@ -6,6 +6,22 @@
   <router-view/>
 </template>
 
+<script>
+import {inject, onMounted} from "vue";
+
+export default {
+  name: 'App',
+  setup() {
+    const emitter = inject('emitter');
+    onMounted(()=>{
+      emitter('onRootFire', (message) =>{
+        console.log(message)
+      })
+    })
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
