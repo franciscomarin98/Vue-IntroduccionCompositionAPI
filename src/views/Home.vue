@@ -1,5 +1,8 @@
 <template>
 
+  <ComponentWithProps name="Francisco"  :age=22 />
+  <hr/>
+
   <Suspense>
     <template #default>
         <SuspenseFetch />
@@ -40,10 +43,12 @@ import SimpleCounterCompositionAPI from "../components/SimpleCounterCompositionA
 import SimpleTodoList from "../components/SimpleTodoList";
 import SimpleFetch from "../components/SimpleFetch";
 import SuspenseFetch from "../components/SuspenseFetch";
+import ComponentWithProps from "../components/ComponentWithProps";
 
 export default {
   name: 'Home',
   components: {
+    ComponentWithProps,
     SuspenseFetch,
     SimpleFetch,
     SimpleTodoList,
