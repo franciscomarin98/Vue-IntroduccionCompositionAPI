@@ -1,5 +1,8 @@
 <template>
 
+  <SimpleFetch />
+  <hr/>
+
   <SimpleTodoList />
   <hr/>
 
@@ -25,10 +28,12 @@ import ReactiveCounter from "../components/ReactiveCounter";
 import WatchCounter from "../components/WatchCounter";
 import SimpleCounterCompositionAPI from "../components/SimpleCounterCompositionAPI";
 import SimpleTodoList from "../components/SimpleTodoList";
+import SimpleFetch from "../components/SimpleFetch";
 
 export default {
   name: 'Home',
   components: {
+    SimpleFetch,
     SimpleTodoList,
     SimpleCounterCompositionAPI,
     WatchCounter,
