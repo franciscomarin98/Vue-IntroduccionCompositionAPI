@@ -1,5 +1,15 @@
 <template>
 
+  <Suspense>
+    <template #default>
+        <SuspenseFetch />
+    </template>
+    <template #fallback>
+        Cargando la información, un momento por favor...
+    </template>
+  </Suspense>
+  <hr/>
+
   <SimpleFetch />
   <hr/>
 
@@ -29,10 +39,12 @@ import WatchCounter from "../components/WatchCounter";
 import SimpleCounterCompositionAPI from "../components/SimpleCounterCompositionAPI";
 import SimpleTodoList from "../components/SimpleTodoList";
 import SimpleFetch from "../components/SimpleFetch";
+import SuspenseFetch from "../components/SuspenseFetch";
 
 export default {
   name: 'Home',
   components: {
+    SuspenseFetch,
     SimpleFetch,
     SimpleTodoList,
     SimpleCounterCompositionAPI,

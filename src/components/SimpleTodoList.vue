@@ -1,5 +1,5 @@
 <template>
-  <h2>Lista de tareas</h2>
+  <h1>Simple Todo List</h1>
   <label>Escriba la tarea por hacer</label>
   <br>
   <input type="text" v-model="todo" @keypress.enter="addTodo" />
