@@ -6,7 +6,7 @@
   <RootEvent/>
   <hr/>
 
-  <EmitEvent/>
+  <EmitEvent @onFire="eventEmitterFromChild"/>
   <hr/>
 
   <ComponentWithProps name="Francisco" :age=22 />
@@ -75,12 +75,17 @@ export default {
     HelloWorld
   },
   setup () {
+
+    const eventEmitterFromChild = (message) =>{
+      console.log(message)
+    }
+
     const loginForm = reactive({
       email: 'test@test.com',
       password: '123456'
     });
 
-    return {...toRefs(loginForm)}
+    return {...toRefs(loginForm), eventEmitterFromChild}
   }
 }
 </script>
